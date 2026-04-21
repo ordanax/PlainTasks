@@ -134,7 +134,7 @@ class PlainTasksNewWithDateCommand(PlainTasksBase):
     def runCommand(self, edit):
         self.view.run_command('plain_tasks_new')
         sels = list(self.view.sel())
-        suffix = ' @created%s' % tznow().strftime(self.date_format)
+        suffix = ' @ВАЖНО'
         points = []
         for s in reversed(sels):
             if self.view.substr(sublime.Region(s.b - 2, s.b)) == '  ':
